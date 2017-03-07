@@ -7,13 +7,12 @@
     "clean": "rimraf -f index.{d.ts,js,js.map,metadata.json} src/*.{d.ts,js,map,metadata.json} bundles",
     "compile": "npm run lint:code && ngc -p tsconfig-build.json",
     "compile:tsc": "npm run lint && tsc -p tsconfig.json",
-    "bundles": "rimraf bundles && npm run rollup && npm run rollup:min",
+    "bundles": "npm run rollup && npm run rollup:min",
     "lint": "npm run lint:code && npm run lint:test",
     "lint:code": "tslint ./src/**/*.ts -t verbose --exclude ./src/**/*.d.ts",
     "lint:test": "tslint ./test/**/*.ts -t verbose --exclude ./test/**/*.d.ts",
     "rollup": "rollup -c rollup.conf.js",
-    "rollup:min": "rollup -c rollup-uglify.conf.js",
-    "build:aot": "rimraf bundles && ngc -p tsconfig-aot.json"
+    "rollup:min": "rollup -c rollup-uglify.conf.js"
   },
   "keywords": [
     "Angular",
