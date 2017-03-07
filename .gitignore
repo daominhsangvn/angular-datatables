@@ -19,9 +19,13 @@ _temp
 !demo/src/**/*.js
 !rollup.conf.js
 !rollup-uglify.conf.js
+aot/
 
 # angular-datatables specific
 *.js.map
 *.d.ts
 *.metadata.json
 index*.js
+!/bundles/**/*.d.ts
+!/bundles/**/*.js
+!/bundles/**/*.metadata.json
